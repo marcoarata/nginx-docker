@@ -61,12 +61,12 @@ create folder for nginx certificates:
 create self-signed certificate:
 >openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
 
-# NGINX Configuration File for http and https access (nginx.conf):
+
+# NGINX Conf File for http and https access (nginx.conf):
 
 
-# ---- > Basic NGINX configuration file content <------
+## ---- > Basic NGINX configuration file content <------
 
-## Main context (this is the global configuration)
 worker_processes 1;
 
 events {
@@ -97,9 +97,8 @@ http {
 }
 
 
-# ---- > Complete NGINX SSL configuration file content <------
+## ---- > Complete NGINX SSL configuration file content <------
 
-## Main context (this is the global configuration)
 worker_processes 1;
 
 events {
@@ -144,7 +143,7 @@ http {
     }
 }
 
-restart nginx: 
+Restart nginx: 
 >nginx -s reload
 
 ->> https://localhost:443
