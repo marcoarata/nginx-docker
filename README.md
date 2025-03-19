@@ -1,49 +1,60 @@
-## Docker Project Commands:
+# Docker Project Commands:
 
-"Dockerfile"
-build image: docker build -t catorce-gigantes:1.0 .
-             docker images | grep catorce-gigantes
+## "Dockerfile"
+build image:
+>docker build -t catorce-gigantes:1.0 .
+>docker images | grep catorce-gigantes
 
-start/stop container: docker run -p 3000:3000 catorce-gigantes:1.0
-                 docker ps
-                 docker stop "ID"
+start/stop container:
+>docker run -p 3000:3000 catorce-gigantes:1.0
+>docker ps
+>docker stop "ID"
 
-"docker-compose.yaml"
-build and start 3 containers instances with docker-compose: docker-compose up --build -d
-stop all containers instances: docker-compose down
-delete all unused or stopped images, containers, networks, etc: docker system prune -a
+## "docker-compose.yaml"
+build and start 3 containers instances with docker-compose:
+>docker-compose up --build -d
+stop all containers instances:
+>docker-compose down
+delete all unused or stopped images, containers, networks, etc:
+>docker system prune -a
 
-## NGINX Basic Commands:
+# NGINX Basic Commands:
 
-brew install nginx / apt update && apt install nginx
-nginx -v  /  nginx -V
+>brew install nginx / apt update && apt install nginx
+>nginx -v  /  nginx -V
 
-whereis nginx  -> --conf-path=/opt/homebew/etc/nginx/nginx.conf
-vim /opt/homebew/etc/nginx/nginx.conf
+>whereis nginx  -> --conf-path=/opt/homebew/etc/nginx/nginx.conf
+>vim /opt/homebew/etc/nginx/nginx.conf
 
-start nginx: nginx
-get options: nginx -h
-restart nginx: nginx -s reload
-stop nginx: nginx -s stop
+start nginx:
+>nginx
+get options:
+>nginx -h
+restart nginx:
+>nginx -s reload
+stop nginx:
+>nginx -s stop
 
-print logs: tail -f /usr/local/var/log/nginx/access.log
-nginx processes: ps aux | grep nginx
+print logs:
+>tail -f /usr/local/var/log/nginx/access.log
+nginx processes:
+>ps aux | grep nginx
 
-## Generate self-signed SSL certificate:
+# Generate self-signed SSL certificate:
 
 create folder for nginx certificates:
-mkdir ~/nginx-certs
-cd ~/nginx-certs
+>mkdir ~/nginx-certs
+>cd ~/nginx-certs
 
 create self-signed certificate:
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
+>openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
 
-## NGINX Configuration File for http and https access (nginx.conf):
+# NGINX Configuration File for http and https access (nginx.conf):
 
 
----- > Basic NGINX configuration file content <------
+# ---- > Basic NGINX configuration file content <------
 
-# Main context (this is the global configuration)
+## Main context (this is the global configuration)
 worker_processes 1;
 
 events {
@@ -74,9 +85,9 @@ http {
 }
 
 
----- > Complete NGINX SSL configuration file content <------
+# ---- > Complete NGINX SSL configuration file content <------
 
-# Main context (this is the global configuration)
+## Main context (this is the global configuration)
 worker_processes 1;
 
 events {
@@ -121,5 +132,7 @@ http {
     }
 }
 
-->> restart nginx: nginx -s reload
+restart nginx: 
+>nginx -s reload
+
 ->> https://localhost:443
