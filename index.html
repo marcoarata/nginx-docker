@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catorce Gigantes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: url('images/gasherbrum.png') no-repeat center center/cover;
+            color: #fff;
+            padding: 150px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .card p {
+            padding: 0 15px 20px;
+            color: #666;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #b6b0b0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Catorce Gigantes</h1>
+        <p>Descubre las cumbres más altas y sus misterios</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#viajes">Viajes</a>
+        <a href="#experiencias">Experiencias</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <h2 style="text-align:center; margin-bottom: 40px;">Explora nuestras secciones</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="images/lhotse.png" alt="Viajes">
+                <h3>Viajes</h3>
+                <p>Rutas y Recorridos por Montañas y Altitudes.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/k2.png" alt="Experiencias">
+                <h3>Experiencias</h3>
+                <p>Lecciones y Vivencias que Alimentan los Sentidos.</p>
+            </div>
+
+            <div class="card">
+                <img src="images/cho-oyu.png" alt="Proyectos">
+                <h3>Proyectos</h3>
+                <p>Canalizar y Materializar las Ideas que Perduran.</p>
+            </div>
+            
+            <div class="card">
+                <img src="images/makalu.png" alt="Proyectos">
+                <h3>Galeria</h3>
+                <p>Aventuras y Desafíos con Paisajes de Maravillas.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Catorce Gigantes. Todos los derechos reservados.</p>
+        <p>
+            <a href="#">LinkedIn</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+</body>
+
+</html>
